@@ -15,6 +15,7 @@ int main() {
     //printf("from_server: %d\n", from_server);
     printf("Send data: ");
     fgets(input, 500, stdin);
+    strcpy(input, strsep(&input, "\n"));
     //printf("Given input: %s\n", input);
     write(to_server, input, 100);
     //printf("[client]wrote to server: %s\n", input);

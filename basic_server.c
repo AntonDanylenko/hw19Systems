@@ -9,7 +9,7 @@ int main() {
   char *response = malloc(100);
 
   signal(SIGINT, sighandler);
-  
+
   while(1){
     from_client = server_handshake( &to_client );
 
@@ -20,7 +20,7 @@ int main() {
       printf("[server]read from client: %s\n", contents);
       //process_data(contents, response);
       strcpy(response, contents);
-      strcat(response, "BACK");
+      strcat(response, "-BACK");
       write(to_client, response, 100);
       //printf("[server]wrote to client: %s\n", response);
     }
