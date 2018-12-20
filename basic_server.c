@@ -6,7 +6,7 @@ int main() {
   int to_client;
   int from_client;
   char *contents = malloc(100);
-  char *response = sizeof(contents);
+  char *response = malloc(sizeof(contents));
 
   from_client = server_handshake( &to_client );
 
