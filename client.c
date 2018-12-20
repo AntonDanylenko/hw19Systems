@@ -7,7 +7,7 @@ int main() {
   int from_server;
   char *input = malloc(500);
   char *contents = malloc(100);
-  
+
   from_server = client_handshake( &to_server );
 
   printf("value of from_server: %d\n", from_server);
@@ -16,7 +16,7 @@ int main() {
     printf("Send data: ");
     fgets(input, 500, stdin);
     printf("Given input: %s\n", input);
-    write(to_server, input, sizeof(input));
+    write(to_server, input, 100);
     printf("[client]wrote to server: %s\n", input);
     read(from_server, contents, 100);
     printf("[client]read from server: %s\n", contents);

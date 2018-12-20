@@ -6,7 +6,7 @@ int main() {
   int to_client;
   int from_client;
   char *contents = malloc(100);
-  char *response = malloc(sizeof(contents));
+  char *response = malloc(100);
 
   from_client = server_handshake( &to_client );
 
@@ -18,7 +18,7 @@ int main() {
     //process_data(contents, response);
     strcpy(response, contents);
     strcat(response, "BACK");
-    write(to_client, response, sizeof(response));
+    write(to_client, response, 100);
     printf("[server]wrote to client: %s\n", response);
   }
 }
