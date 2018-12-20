@@ -8,6 +8,7 @@ int main() {
 
   from_client = server_handshake( &to_client );
 
+  printf("Value of from_client: %d\n", from_client);
   while(from_client){
     char *contents = malloc(100);
     read(from_client, contents, 100);
