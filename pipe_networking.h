@@ -21,6 +21,6 @@ int client_handshake(int *to_server);
 
 int process_data(char *input , char *output);
 
-//static void sighandler(int signo);
+static void sighandler(int signo);
 
 #endif
