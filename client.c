@@ -10,6 +10,7 @@ int main() {
 
   printf("value of from_server: %d\n", from_server);
   while(from_server){
+    printf("from_server: %d\n", from_server);
     char *input = malloc(500);
     char *contents = malloc(100);
     printf("Send data: ");
