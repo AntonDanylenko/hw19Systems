@@ -56,7 +56,7 @@ int client_handshake(int *to_server) {
   process data to send back to client.
   each character in input string becomes 1 greater in output.
   =========================*/
-int process_data(char *input, char *output){
+/*int process_data(char *input, char *output){
   while(input){
     strcat(output, input[0] + 1);
     input++;
@@ -64,4 +64,4 @@ int process_data(char *input, char *output){
   printf("input: %s\n", input);
   printf("output: %s\n", output);
   return 0;
-}
+}*/
