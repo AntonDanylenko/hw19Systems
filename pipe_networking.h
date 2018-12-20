@@ -18,4 +18,6 @@ int server_handshake(int *to_client);
 
 int client_handshake(int *to_server);
 
+int process_data(char *input , char *output);
+
 #endif
