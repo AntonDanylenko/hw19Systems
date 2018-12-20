@@ -16,7 +16,7 @@ int main() {
     read(from_client, contents, 100);
     printf("[server]read from client: %s\n", contents);
     //process_data(contents, response);
-    strcpy(response, data);
+    strcpy(response, contents);
     strcat(response, "BACK");
     write(to_client, response, sizeof(response));
     printf("[server]wrote to client: %s\n", response);
