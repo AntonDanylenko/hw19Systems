@@ -66,7 +66,7 @@ int client_handshake(int *to_server) {
   return 0;
 }*/
 
-static void sighandler(int signo){
+void sighandler(int signo){
   if (signo == SIGINT){
     unlink("wkp");
     printf("Program exited due to SIGINT\n");
