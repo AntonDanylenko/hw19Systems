@@ -22,6 +22,7 @@ int server_handshake(int *to_client) {
   printf("[server]{handshake}write to client\n");
   read(from_client, contents, 100);
   printf("[server]{handshake}read from client: %s\n", contents);
+  printf("END HANDSHAKE\n");
   return from_client;
 }
 
@@ -47,5 +48,6 @@ int client_handshake(int *to_server) {
   printf("[client]{handshake}read from server: %s\n", contents);
   write(*to_server, ACK, 5);
   printf("[client]{handshake}write to server\n");
+  printf("END HANDSHAKE\n");
   return from_server;
 }
