@@ -24,5 +24,7 @@ int main() {
       write(to_client, response, 100);
       //printf("[server]wrote to client: %s\n", response);
     }
+
+    printf("Client Exited\n");
   }
 }
